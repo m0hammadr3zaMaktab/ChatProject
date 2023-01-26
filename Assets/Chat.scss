@@ -1,0 +1,123 @@
+$background : #3aafa9;
+$button : #17252a;
+$secoundary : #2b7a78;
+$colorroshan : #FEFFFF;
+$colortire: #def2f1;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $background;
+}
+
+main {
+    width: 70%;
+    margin: auto;
+    box-shadow: -1px -1px 14px 0px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: -1px -1px 14px 0px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: -1px -1px 14px 0px rgba(255, 255, 255, 0.75);
+}
+
+main {
+    .header {
+        background: $secoundary;
+        color: $colorroshan;
+        padding: 1em;
+    }
+
+    .chatting-area {
+        background: rgb(219, 219, 219);
+        height: 70vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 3em;
+        gap: 2em;
+        overflow-y: scroll;
+
+        span {
+            position: relative;
+            background: $colorroshan;
+            width: fit-content;
+            padding: 0.5em 1em;
+            border-radius: 18px;
+            box-shadow: 0px 0px 5px -2px rgba(255, 255, 255, 1);
+            -webkit-box-shadow: 0px 0px 5px -2px rgba(255, 255, 255, 1);
+            -moz-box-shadow: 0px 0px 5px -2px rgba(255, 255, 255, 1);
+            display: flex;
+            flex-direction: column;
+            span:first-child{
+                display: flex;
+                flex-direction: row;
+                gap: 1em;
+                justify-content: space-between;
+                .name-of-user{
+                    font-size: x-small;
+                    align-self: flex-start;
+                    color: #2b7a78;
+                }
+                button{
+                    border: none;
+                    background: $colorroshan;
+                    color: #17252a;
+                }
+            }
+
+            span:nth-child(3){
+                font-size: 16px;
+
+            }
+        }
+        span:nth-child(odd){
+            align-self: flex-end;
+        }
+    }
+
+    .typing-area {
+        height: 5vh;
+        width: 100%;
+        background: $secoundary;
+
+        form {
+            display: flex;
+            justify-content: space-between;
+
+            textarea {
+                width: 100%;
+                background: $secoundary;
+                color: $colorroshan;
+                resize: none;
+                border: none;
+            }
+
+            textarea:focus {
+                background: $background;
+            }
+
+            .submit {
+                background: $secoundary;
+                border: none;
+            }
+
+            .uploading-div {
+                input {
+                    display: none;
+                }
+
+                label {
+                    margin-top: 0.65em;
+                }
+            }
+
+        }
+    }
+}
